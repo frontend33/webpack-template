@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    // нужно правильно добавлять импорты
+    "allowSyntheticDefaultImports": true, // фдаг позволяет работать с пакетами common js через requeired которые импортируются import (requeire() module.exports() = common.js
+    "esModuleInterop": true, // могут не иметь дефолт импорта вместо import * as React from 'react' делаем import React from "react"
+    "noImplicitAny": true,
+    "module": "ESNext",
+    "target": "es5",
+    "jsx": "react-jsx", // C 18 версией реакта не надо импортировать React
+    "allowJs": true,
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "reactOptions": {
+    "fastRefresh": true,
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  }
+}
